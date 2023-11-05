@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javaScriptpractice</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap');
+        body{
+            font-family: 'Poppins', sans-serif;
+             font-family: 'Roboto', sans-serif;
+          
+
+        }
+        h1{
+            text-align: center;
+            color: #d8b5ff;
+        }
+        .credit{
+            text-align: center;
+            color: #c6ea8d;
+        }
+        .content{
+            padding-top: 45px;
+            padding-bottom: 20px;
+            display: flex;
+             justify-content: center;
+             flex-direction: column;
+             align-items: center;
+        }
+        .bottom-container{
+            width: 176px;
+            margin: 0 auto;
+            margin-top: 30px;
+            padding-top: 40px;
+        }
+        .button-su{
+            overflow: hidden;
+            position: relative;
+            display: inline-block;
+            border-radius: 3px;
+            margin-bottom: 30px;
+            box-shadow: 0px 10px 8px -8px #bff098;
+        }
+        .su-button-circle{
+            background-color: red;
+            border-radius: 1000px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 0px;
+            height: 0px;
+            margin-left: 0px;
+            margin-top: 0px;
+            pointer-events: none;
+
+        }
+        .button-su-inner{
+            display: inline-block;
+            background: #f88627;
+            color: #f4f4f4;
+            font-size: 16px;
+            font-weight: normal;
+            width: 132px;
+            text-align: center;
+            border-radius: 3px;
+            transition: 400ms;
+            text-decoration: none;
+            padding: 27px;
+            z-index: 100000;
+        }
+        .button-text-container{
+            position: relative;
+            z-index: 10000;
+        }
+        .explode-circle{
+            animation: explode 0.5s forwards;
+        }
+        .display-circle{
+            animation: desplode 0.5s forwards;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>
+            Diffrent Events Type in Javascript
+        </h1>
+        <div class="button-container">
+            <div class="button-su">
+                <span class="su-button-circle">
+
+                </span>
+                <a href="#" class="button-su-inner" onclick="alert('I am awesom, but no one use my skilles')">
+                    <span class="button-text-container">
+                        simple inline alert()
+                    </span></a>          
+            </div>
+        </div>
+
+        <div class="button-su">
+            <span class="su-button-circle"></span>
+            <a href="#" class="button-su-inner" onclick="callingFunction()">
+            <span class="button-text-container">
+                By calling a Function
+            </span></a>
+        </div>
+
+
+        <div class="button-su">
+            <span class="su-button-circle">
+
+            </span>
+            <a href="#" class="button-su-inner">
+                <span class="button-text-container" id="thirdWay">
+                    inline event
+                </span>
+            </a>
+        </div>
+        <div class="button-su">
+            <span class="su-button-circle">
+
+            </span>
+            <a href="#" class="button-su-inner">
+                <span class="button-text-container" id="fourthWay">
+                    Event Listeners
+                </span>
+            </a>
+        </div>
+
+    </div>
+    <script>
+     const callingFunction = () =>{
+        alert('most common way of writing function');
+     }
+// 3rd way wiriting function
+     const thirdWay = document.getElementById('thirdWay') ;
+     thirdWay.onclick = function(){
+        alert('most common way of writing function');
+
+     }
+
+     thirdWay.onclick = function(){
+        console.log('most common way of writing function');
+
+     }
+    //  4Th way of writing function
+     const fourthWay = document.querySelector('#fourthWay');
+      fourthWay.addEventListener('click',() =>{
+        alert('I love this way of writing ');
+
+      })
+      fourthWay.addEventListener('click',() =>{
+        console.log('I love this way of writing ');
+
+      })
+    </script>
+</body>
+</html>
