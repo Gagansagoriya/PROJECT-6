@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript project 6</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           
+        }
+        #box{
+            margin-top: 300PX;
+            height: 300px;
+            width: 300px;
+            border: 5px solid #5a6170;
+            border-radius: 9px;
+        
+
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+
+    </div>
+    <SCRIpt>
+        const mEnter = document.getElementById("box");
+
+        mEnter.addEventListener('mouseenter', () => {
+            mEnter.style.backgroundColor = '#9da6b8';
+            console.log("Mouse enter Event");
+        });
+
+        mEnter.addEventListener('mouseleave', ()  => {
+            console.log("Mouse leave Evnent");
+            mEnter.style.backgroundColor = '#6c63ff';
+        });
+    </SCRIpt>
+</body>
+</html>

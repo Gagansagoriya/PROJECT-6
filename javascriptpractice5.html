@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript project 5</title>
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap');
+        body{
+            font-family: 'Poppins', sans-serif;
+             font-family: 'Roboto', sans-serif;         
+             background: #2a364f;
+             place-items: center;
+        }
+       button{
+        display: inline-block;
+        background: #f8b627;
+        color: #fff;
+        font-size: 16px;
+        font-weight: normal;
+        width: 132px;
+        border-radius: 3px;
+        transition: 400mx;
+        text-decoration: none;
+        padding: 10px 22px;
+        outline: none;
+        border: none;
+       }
+       p{
+        text-align: center;
+        color: #fff;
+       }
+       h1{
+        color: #00b7ff;
+       }
+
+    </style>
+</head>
+<body>
+    <p id="myP" onmousedown="mouseDown()" onmouseup="mouseUp()">
+    Click the text! mouseDown() function is triggered when the mouse button is pressed down over htis paragraph, and sets the color of the text 
+to red. The mouseUp() function is triggered when the mnouse button is released, and sets the color of the text ot green.</p>
+
+    <script>
+        function mouseDown() {
+            document.getElementById("myP").style.color ="#ea8d8d"
+        }
+        function mouseUp() {
+            document.getElementById("myP").style.color = 'red';
+        }
+    </script>
+</body>
+</html>
