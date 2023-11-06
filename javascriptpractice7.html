@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script practice 7</title>
+    <style>
+        .main-div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        input{
+            width: 300px;
+            height: 150px;
+            border: 5px solid #6c63ff;
+            border-radius: 6px;
+            text-wrap: wrap;
+        }
+        p{
+            font-size: 25px;
+            color: #5a6170;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-div">
+        <p>
+             A function is triggered when the user is pressing a key in the input field.
+        </p>
+        <br>
+        <input type="text" class="effect-1" onkeypress="keypress()" onkeydown="keyDown()" onkeyup="keyUp()">
+        <br>
+        <p id="keys"></p>
+    </div>
+    <script>
+        const keypress = () => {
+            document.getElementById('keys').innerHTML = ` you press ${event.key} and its code is ${event.code}`;
+        }
+        //  Better to use 2nd and 3rd once
+
+        const keyDown = () => {
+            document.getElementById('keys').innerHTML= `key is Down`;
+            // when we click backslan to delete it will run 
+        }
+
+        const keyUp = () =>{
+            document.getElementById('keys').innerHTML = `key is up`;
+            // when we click backslan to delete then it will run
+        }
+    </script>
+</body>
+</html>

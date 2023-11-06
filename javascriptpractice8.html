@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script practice 8</title>
+    <style>
+        .main-container{
+            margin-top: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: #dff;
+            font-size: 25px;
+        }
+        body{
+            background-color: #00b7ff;
+        }
+        #result{
+            color: #0b77ff;
+        }
+        input{
+            width: 200px;
+            height: 40px;
+            border: 2px solid rgb(167, 202, 202);
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px; 
+            margin-bottom: 5px;
+        }
+        select{
+            width: 200px;
+            height: 40px;
+            border: 2px solid rgb(167, 202, 202);
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            
+        }
+        label{
+            text-transform: capitalize;
+        }
+        #lable-1{
+           margin-right: 195px;
+        }
+        option{
+            background-color: #6fd6ff;
+            color: #0b77ff;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        </style>
+</head>
+<body>
+    <div class="main-container">
+        <div>
+            <label for="" id="lable-1">Your Name</label>
+            <input type="text" name="" id="name">
+            <br>
+            <label for="">choose your ice-cream flavour
+            <select name="ice-creams" id="ice-creams" onchange="selectElement()">
+            <option value="select-one">Select one Ice cream</option>
+            <option value="Chocholate">Chocholate</option>
+            <option value="Vanila">Vanila</option>
+            <option value="Coconut">Coconut</option>
+            </select>
+        </label>
+        <br>
+        <div id="result"></div>
+        </div>
+    </div>
+    <script>
+        // const selectElement = () =>{
+        //     const inputChange = document.getElementById('name').value;
+        //     const iceCreams = document.getElementById('ice-creams').value;
+        //     const result = document.getElementById('result');
+
+        //     result.innerHTML = ` Mr ${inputChange} select ${iceCreams} ice-cream-flavour`
+        //     console.log(`${inputChange} and ${iceCreams}`);
+
+        // }
+        const iceCreams = document.getElementById('ice-creams');
+        iceCreams.addEventListener('change' , () =>{
+            const inputChange = document.getElementById('name').value;
+            const iceCreams = document.getElementById('ice-creams').value;
+            const result = document.getElementById('result');
+
+            result.innerHTML = ` Mr ${inputChange} select ${iceCreams} ice-cream-flavour`;
+        })
+
+
+    </script>
+</body>
+</html>
