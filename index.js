@@ -805,3 +805,164 @@
 // 4: using Event Listeners (addEventsListner and IE's attachEvent)
 
 // check the Events HTML File
+
+// *-----***Section 2 : waht is Event objects
+// Event objects ois the parent object of the event object.
+// for example 
+// MouseEvent, focusEvent, keyboardEvent etc
+
+
+// *****----Section 3 : Keybooard Event in JavaScript
+// Events that occur when user pressed a key on the keyboard,
+// belongs to the KeyboardEvent Object.
+// https://www.w3schools.com/jsref/obj_keyboardevent.asp
+
+// ********---------**************--------************
+// Section 4 inputevents in JavaScript
+// The onchange events sccurs when the value of an element has been changed.
+
+// For radiobuttons and chackboxes, the onchange event occurs when the 
+// checked state has been changed.
+
+
+// ***********------------*****************
+// JavaScript Timing Events 
+
+// The window object allow execution of code at specified time intervals.
+
+// These time intervals are called timing events.
+
+// The two key methods to use with javaScript are:
+
+// setTimeout(funtion, milliseconds)
+// Executes a funtion, after waiting a specified number of milliseconds.
+
+// setInterval(function, milliseconds)
+// Same as setTimeout(), but repeats the execution of the function continuously.
+
+// setTimeout()
+
+// clearTimeout()
+
+//setInterval()
+
+// clearInterval()
+
+
+// ********----------*************
+// OOPs in JavaScript
+// **************-----------***********
+// Q.1 What is Object Literal ?
+
+// Object literal is simlply a key: value pair data structure.
+// Storing variables and function together in one container,
+// we can refer this as an Objects.
+
+// object = school bag
+
+// How to crate an Object?
+
+// 1st Way 
+
+// let bioData = {
+//     myName : "My Name is here",
+//     myAge : 23,
+//     getData : function() {
+//         console.log(`My name is ${bioData.myName} and my age is ${bioData.myAge}`);
+//     }
+// };
+// bioData.getData();
+// 2nd Way no need to write function as well after es6 
+
+// let bioData = {
+//     myName : "Serosha",
+//     myAge : 23,
+//     getData() {
+//         console.log(`My name is ${bioData.myName} and my age is ${bioData.myAge}`);
+//     }
+// };
+// bioData.getData();
+
+// Waht if we want object as a value inside an Object
+
+// let bioData = {
+//     myName : {
+//         realName : 'Leagal Name',
+//         channleName : "The orcal"
+//     },
+//     myAge : 23,
+//     getData() {
+//         console.log(`My name is ${bioData.myName} and my age is ${bioData.myAge}`);
+//     }
+// };
+
+// console.log(bioData.myName.channleName);
+// bioData.getData();
+
+// What is this Object?
+
+// The defination of "this" object is that it contain the current context.
+
+// The this object can have different values depending on where it is placed.
+
+// Fro example 1
+// console.log(this.alert('This is This'));
+
+// For example 2
+// function myName() {
+//     console.log(this);
+// }
+// myName();
+
+// For example 3
+// var myNames = 'This';
+// function myName() {
+//     console.log(this.myNames);
+// }
+// myName();
+
+// Example 4
+
+// const object ={
+//     myAge : 26,
+//     myName () {
+//         console.log(this.myAge);
+//     }
+// }
+// object.myName();
+
+// Example 5
+
+// const object ={
+//     myAge : 26,
+//     myName () {
+//         console.log(this);
+//     }
+// }
+// object.myName();
+
+// const obj ={
+//     myAge : 26,
+//     myName: ()  => {
+//         console.log(this);
+//     }
+// }
+// obj.myName();
+
+
+// Problem 1
+
+// let bioData = {
+//     myName :{
+//         realName : "Squarel",
+//         channleName : "Squees"
+//     },
+//     myAge : 26,
+//     getData () {
+//         console.log(`My name is ${this.myName.realName} and my age is ${this.myAge}`);
+//         console.log(`My name is ${this.myName.channleName}`);
+
+//     }
+// }
+
+// bioData.getData();
