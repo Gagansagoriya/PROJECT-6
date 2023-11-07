@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice set 1</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #e9e2db;
+        }
+        .parent-container{
+            width: 400px;
+            height: 400px;
+            border: 8px solid #6c63ff;
+            margin-top: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #9da6b8;
+            border-bottom-right-radius: 20px;
+            border-top-left-radius: 20px;
+        }
+        .child-container{
+           
+            width: 18rem;
+            height: 18rem;
+            border: 5px solid #f2994a;
+            background: #5a6170;
+            border-top-right-radius: 15px;
+            border-bottom-left-radius: 15px;
+           
+        }
+    </style>
+</head>
+<body>
+    <div class="parent-container" id="parentId">
+        <div class="child-container" id="childId">
+        </div>
+    </div>
+    <script>
+        const parentId = document.getElementById('parentId');
+        const childId = document.getElementById('childId');
+        const paraCell = () =>{
+           alert('Parentdiv');
+
+        }
+        const childCell = () =>{
+            alert('Child div Cell')
+            event.stopPropagation();
+        }
+        parentId.addEventListener('click' , paraCell);
+        childId.addEventListener('click' , childCell);
+    </script>
+</body>
+</html>
